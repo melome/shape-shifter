@@ -1,0 +1,36 @@
+.radiogroup {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.radiogroup > label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radiogroup > label > span {
+    color: #1f1f1f;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.radiogroup > label > span > span > svg {
+    height: 1rem;
+    color: #ff0072;
+}
+
+.formcontrol {
+    width: 100%;
+    border: none;
+    padding: 5px 0;
+}
+
+.radio {
+    border: none;
+    height: 0;
+    cursor: pointer;
+}

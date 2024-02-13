@@ -1,0 +1,74 @@
+:root {
+  font-family: "Noto Sans Mono", monospace;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #f8f4f4;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Paper */
+.MuiPaper-root {
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; */
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 10px !important;
+  background: white;
+}
+
+.MuiPaper-root label {
+  display: block;
+  color: #1f1f1f;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: left !important;
+}
+
+
+/* Slider */
+.MuiSlider-root {
+  color: #818181;
+  cursor: pointer;
+}
+
+
+.MuiSlider-rail {
+  color: #818181;
+}
+
+.MuiSlider-root, .MuiSlider-track, .MuiSlider-thumb {
+  color: #ff0071
+}
+
+.MuiSlider-thumb:hover {
+  box-shadow:0px 0px 0px 8px rgb(243 124 227 / 23%) !important;
+}

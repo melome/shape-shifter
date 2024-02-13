@@ -1,0 +1,37 @@
+.paper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 120px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 10px !important;
+    background: white;
+}
+
+.paper label {
+    display: block;
+    color: #1f1f1f;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.paper input {
+    width: 100%;
+    border: none;
+    padding: 2px;
+    font-size: 12px;
+}
+
+.paper button {
+    border: none;
+    height: 20px;
+    border-radius: 0px;
+    margin: 5px 0px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    background-color: #1a1a1a;
+    color: white;
+}

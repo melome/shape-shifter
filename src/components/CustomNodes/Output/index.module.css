@@ -1,0 +1,39 @@
+.MuiPaper-root {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 120px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 10px !important;
+    background: white;
+}
+
+.MuiPaper-root label {
+    display: block;
+    color: #1f1f1f;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: left !important;
+}
+
+.output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff0071;
+    background-color: #ff0071;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.output p {
+    padding: 5px;
+    font-size: 1vw;
+    /* Fluid font size based on the viewport width */
+    color: rgb(235, 244, 245);
+    text-align: center;
+}
