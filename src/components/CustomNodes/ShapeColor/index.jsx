@@ -1,28 +1,37 @@
 import React from 'react';
-import { Paper } from '@mui/material';
+import { Paper, TextField } from '@mui/material';
 import { MuiColorInput } from 'mui-color-input';
 import { Handle, Position } from 'reactflow';
 import styles from './index.module.css';
 
 
 import useShapeStore from '../../../store/shapeStore';
+import { Container } from '@mui/system';
 
 export default function ShapeColor({ data, isConnectable }) {
     const [value, setColor] = useShapeStore(state => [state.shapeColor, state.setShapeColor]);
 
-    const handleColorChange = (newColor) => {
-        setColor(newColor)
+    const handleColorChange = (event) => {
+        setColor(event.target.value);
     }
 
     return (
-        <Paper elevation={3} className={styles.paper}>
+        <Paper elevation={3} >
             <label htmlFor="Shape Color">shape color:</label>
-            <MuiColorInput
-                format='hex'
-                value={value}
-                onChange={handleColorChange}
-                className={styles.MuiColorInput}
-            />
+            <div className={styles.container}>
+                <input
+                    type='color'
+                    value={value}
+                    onChange={handleColorChange}
+                    className={styles.colorPicker}
+                />
+                <input
+                    value={value}
+                    onChange={handleColorChange}
+                    className={styles.colorInput}
+                />
+            </div>
+
             <Handle
                 type="source"
                 position={Position.Right}
