@@ -6,12 +6,10 @@ import styles from './index.module.css';
 import useShapeStore from '../../../store/shapeStore';
 
 export default function Output({ data, isConnectable }) {
-    const shape = useShapeStore(state => state.shape);
-    const shapeColor = useShapeStore(state => state.shapeColor);
-    const zoomLevel = useShapeStore(state => state.zoomLevel);
+    const { shape, shapeColor, shapeSize } = useShapeStore();
 
     // Calculate the size based on zoomLevel
-    const size = Math.min(150 * zoomLevel, 250);
+    const size = shapeSize * 2 + 50;    // 50 is the minimum size for the output node);
 
     // Define dynamic styles based on shape and shapeColor
     const dynamicStyles = {
