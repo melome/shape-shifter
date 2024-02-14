@@ -1,9 +1,29 @@
-# React + Vite
+# Shape Shifter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple app that allows users to modify the size, color, and shape of an object using Reactflow.
 
-Currently, two official plugins are available:
+![](./shapeShifter.gif)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# reactflow-exercise
+## Features
+
+
+1. **shapesize**: Modifies the size of the shape.
+2. **shapeColor**: Modifies the color of the shape.
+3. **shape**: Modifies the type of shape.
+
+## Setup Instructions
+
+
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+4. Run `npm run dev` to start the app.
+
+## Usage
+1. Use the `shapesize` feature to adjust the size of the shape.
+2. Utilize the `shapeColor` feature to change the color of the shape.
+3. Experiment with the `shape` feature to modify the type of shape.
+
+## Note
+
+This app utilizes Reactflow, which provides a simple way to build flowcharts and node-based graphs.
