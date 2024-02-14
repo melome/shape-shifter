@@ -4,8 +4,8 @@ const useShapeStore = create((set) => ({
     shapes: ['square', 'circle'],
     shape: 'circle',
     setShape: (shape) => set({ shape }),
-    zoomLevel: 20,
-    setZoomLevel: (zoomLevel) => set({ zoomLevel }),
+    shapeSize: 100,
+    setShapeSize: (shapeSize) => set({ shapeSize }),
     shapeColor: '#ff0071',
     setShapeColor: (shapeColor) => set({ shapeColor }),
 }));

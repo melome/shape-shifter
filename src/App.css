@@ -5,3 +5,7 @@
   border: none;
   background-color: unset;
 }
+
+.react-flow__node-output.selectable.selected, .react-flow__node-output.selectable:focus {
+  box-shadow: none;
+}

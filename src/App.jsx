@@ -15,12 +15,12 @@ import ReactFlow, {
 //Import customized nodes
 import ShapeColor from "./components/CustomNodes/ShapeColor/index.jsx";
 import ShapeType from "./components/CustomNodes/ShapeType/index.jsx";
-import ZoomLevel from "./components/CustomNodes/ZoomLevel/index.jsx";
+import ShapeSize from "./components/CustomNodes/ShapeSize/index.jsx";
 import Output from "./components/CustomNodes/Output/index.jsx";
 const nodeTypes = {
   shapeColor: ShapeColor,
   shapeType: ShapeType,
-  zoomLevel: ZoomLevel,
+  shapeSize: ShapeSize,
   output: Output
 };
 
@@ -39,7 +39,7 @@ const initialNodes = [
   },
   {
     id: "3",
-    type: "zoomLevel",
+    type: "shapeSize",
     position: { x: 250, y: 220 },
     data: { label: "Change Zoom Level" }
   },
@@ -87,6 +87,7 @@ export default function App() {
         defaultEdgeOptions={defaultEdgeOptions}
         nodeTypes={nodeTypes}
         fitView="true"
+        snapToGrid={true}
       >
         <Controls />
         <MiniMap />
