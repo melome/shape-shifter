@@ -6,9 +6,7 @@ import styles from './index.module.css';
 import useShapeStore from '../../../store/shapeStore';
 
 export default function ShapeType({ data, isConnectable }) {
-    const shapes = useShapeStore(state => state.shapes);
-    const [value, setShape] = useShapeStore(state => [state.shape, state.setShape]);
-
+    const {shapes, shape, setShape} = useShapeStore();
     const handleShapeChange = (event) => {
         setShape(event.target.value);
     };
@@ -18,7 +16,7 @@ export default function ShapeType({ data, isConnectable }) {
             <label htmlFor="shape-color">shape type:</label>
             <RadioGroup
                 aria-labelledby="shapes"
-                value={value}
+                value={shape}
                 name="shapes"
                 className={styles.radiogroup}
                 onChange={handleShapeChange}

@@ -16,7 +16,7 @@ export default function ShapeSize({ data, isConnectable }) {
             <label htmlFor="zoom-level">shape size:</label>
             <Slider
                 className='nodrag'
-                pointerevents="auto"
+                pointerEvents="auto"
                 value={shapeSize}
                 size='small'
                 aria-label="Zoom Level"
