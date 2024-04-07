@@ -1,6 +1,5 @@
 import React from 'react';
 import { Paper, TextField } from '@mui/material';
-import { MuiColorInput } from 'mui-color-input';
 import { Handle, Position } from 'reactflow';
 import styles from './index.module.css';
 
@@ -9,10 +8,10 @@ import useShapeStore from '../../../store/shapeStore';
 import { Container } from '@mui/system';
 
 export default function ShapeColor({ data, isConnectable }) {
-    const [value, setColor] = useShapeStore(state => [state.shapeColor, state.setShapeColor]);
+    const {shapeColor, setShapeColor} = useShapeStore();
 
     const handleColorChange = (event) => {
-        setColor(event.target.value);
+        setShapeColor(event.target.value);
     }
 
     return (
@@ -21,12 +20,12 @@ export default function ShapeColor({ data, isConnectable }) {
             <div className={styles.container}>
                 <input
                     type='color'
-                    value={value}
+                    value={shapeColor}
                     onChange={handleColorChange}
                     className={styles.colorPicker}
                 />
                 <input
-                    value={value}
+                    value={shapeColor}
                     onChange={handleColorChange}
                     className={styles.colorInput}
                 />
