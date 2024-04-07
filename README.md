@@ -1,6 +1,6 @@
 # Shape Shifter App
 
-This is a simple app that allows users to modify the size, color, and shape of an object using Reactflow.
+This is a simple app that allows users to modify the size, color, and shape of an object using Reactflow. You can try it [here](https://shape-shifter-puce.vercel.app/). 
 
 ![](./shapeShifter.gif)
 
