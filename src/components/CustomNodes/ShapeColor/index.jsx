@@ -5,13 +5,33 @@ import styles from './index.module.css';
 
 
 import useShapeStore from '../../../store/shapeStore';
-import { Container } from '@mui/system';
+import { useStore } from '../../../store/reactflowStore';
 
 export default function ShapeColor({ data, isConnectable }) {
     const {shapeColor, setShapeColor} = useShapeStore();
+    const {nodes, connectedEdges} = useStore();
+
+    // Filter nodes with type "shapeColor"
+    const shapeColorNode = nodes.find((node) => {
+        if (node.type === "shapeColor") {
+            console.log(node);
+            return node;
+        }
+    });
+
+    const outputNodeId = "4";
+
+    const isConnected = connectedEdges.find((connection) => {
+        if (connection.source === shapeColorNode.id && connection.target === outputNodeId) {
+            console.log("connection exist")
+            return true;
+        }
+    })
 
     const handleColorChange = (event) => {
-        setShapeColor(event.target.value);
+        if (isConnected){
+            setShapeColor(event.target.value);
+        }
     }
 
     return (
